@@ -1,11 +1,19 @@
 version: "3"
 
 services:
-  database:
-    image: "postgres:latest"
-    env_file:
-        - .env
-    ports:
-      - ${POSTGRES_PORT}:${POSTGRES_PORT}
-    volumes:
-      - ./db-data/:/var/lib/postgresql/data/
+    app:
+        build: .
+        links:
+            -   database
+        env_file:
+            - .env
+        ports:
+            - ${FLASK_PORT}:${FLASK_PORT}
+    database:
+        image: "postgres:latest"
+        env_file:
+            - .env
+        ports:
+            - ${POSTGRES_PORT}:${POSTGRES_PORT}
+        volumes:
+            - ./db-data/:/var/lib/postgresql/data/
