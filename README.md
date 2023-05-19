@@ -43,3 +43,11 @@ Launch docker-compose
 ```bash
 docker-compose up -d
 ```
+
+Init and migrate db:
+
+```bash
+flask db init
+flask db migrate
+flask db upgrade
+```
