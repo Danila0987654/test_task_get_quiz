@@ -17,6 +17,10 @@ to your .env file
     POSTGRES_PASSWORD=
     POSTGRES_DB=
     POSTGRES_PORT=
+    FLASK_HOST=
+    FLASK_PORT=
+    FLASK_DEBUG=
+    FLASK_SECRET_KEY=
 ***
 
 
