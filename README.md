@@ -21,6 +21,7 @@ to your .env file
     FLASK_PORT=
     FLASK_DEBUG=
     FLASK_SECRET_KEY=
+    SQLALCHEMY_TRACK_MODIFICATIONS=
 ***
 
 
